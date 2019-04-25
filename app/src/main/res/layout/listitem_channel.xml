@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:id="@+id/frame_listitem_channel_bg"
+    android:layout_height="wrap_content" android:descendantFocusability="blocksDescendants">
+
+    <ImageButton
+        android:id="@+id/btn_channel_detail"
+        android:layout_width="30dp" android:layout_gravity="center_vertical"
+        android:layout_height="30dp"
+        android:layout_margin="5dp" android:src="@drawable/btn_channel_detail"
+        android:background="@null" android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/text_channel_name" android:layout_margin="5dp"
+        android:layout_width="match_parent" android:focusable="false"
+        android:layout_height="wrap_content" android:textSize="15sp"
+        android:gravity="right|center_vertical" />
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tyw.moniter.main"
+    android:versionCode="8"
+    android:versionName="1.2.1.1">
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.2.1.1_________________________________ -->
+    <!-- ________2019-02-26 versionCode=8 ,versionName="1.2.1.1"_______begin -->
+    <!-- 移除新科起重机公司相关信息，地图变为全国地图
+    -->
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.2.1.0_________________________________ -->
+    <!-- ________2019-02-19 versionCode=7 ,versionName="1.2.1.0"_______begin -->
+    <!-- 混淆代码
+    -->
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.2.0.1_________________________________ -->
+    <!-- ________2019-01-29 versionCode=6 ,versionName="1.2.0.0"_______begin -->
+    <!-- 优化TV下选择控件，通过移除了主页的强制竖屏尝试修改主页竖屏
+         开启横竖屏切换：移除了主页的强制竖屏 android:screenOrientation="portrait"
+    -->
+
+
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.2.0.0_________________________________ -->
+    <!-- ________2019-01-06 versionCode=5 ,versionName="1.2.0.0"_______begin -->
+    <!-- 增加了SiemensS7TCPIPEthernet协议的支持(包含读，写) -->
+    <!-- 增加了APP端临时修改S7协议部分参数功能 -->
+    <!-- 修正使String类型(ASCII String)正常工作 -->
+    <!-- 其他细节调整 -->
+    <!-- 同步更新PC配置工具 -->
+    <!-- PC配置工具:新增S7相关配置 -->
+    <!-- PC配置工具:优化配置Tag地址时自动切换Tag数据类型(针对SiemensS7) -->
+    <!-- PC配置工具:优化切换Tag数据类型时自动切换Tag量程变换(不可量程变换的数据类型自动设置为ScalingType_None) -->
+    <!-- ________2019-01-06 提交versionCode=5 ,versionName="1.2.0.0"________ end -->
+
+
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.1.0.0_________________________________ -->
+    <!-- ________2019-01-02 提交versionCode=3 ,versionName="1.1.0.0" ______begin -->
+    <!-- 增加了modbus RTU,TCP协议写点值功能 -->
+    <!-- 修正使Double类型正常显示 -->
+    <!-- 其他细节调整 -->
+    <!-- 同步更新PC配置工具 -->
+    <!-- ________2019-01-02 提交versionCode=3 ,versionName="1.1.0.0" ________ end -->
+
+
+    <!-- ________________________________________________________________________ -->
+    <!-- _______________________________v1.0.0.0_________________________________ -->
+    <!-- ________2019-01-02 提交versionCode=1 ,versionName="1.0.0.0"_______begin -->
+    <!-- 支持modbusRTU,TCP协议读点值 -->
+    <!-- 支持自定义Channel,Device,Tag功能 -->
+    <!-- 支持自定义图表、告警功能 -->
+    <!-- 支持自定义网络配置功能，查看连接网络功能 -->
+    <!-- 支持APP端临时修改相关协议部分参数 -->
+    <!-- 同步更新PC配置工具 -->
+    <!-- ________2019-01-02 提交versionCode=3 ,versionName="1.1.0.0"________ end -->
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Splash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DeviceLocationMapActivity"
+            android:label="@string/top_navigation_title_device_location_map"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/title_activity_login" />
+
+    </application>
+
+</manifest>

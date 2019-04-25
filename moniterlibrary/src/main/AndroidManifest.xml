@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="moniter.tyw.com.moniterlibrary" >
+
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+
+
+</manifest>

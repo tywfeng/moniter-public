@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.TagsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical">
+            <com.tyw.moniter.main.ui.View.ExpandLinearLayout
+                android:layout_width="match_parent" android:orientation="horizontal"
+                android:id="@+id/expand_device_toggle_control"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_fragment_tags_device_detail"
+                    android:layout_width="0dp" android:layout_weight="1.0"
+                    android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+                    android:background="@null" android:textColor="#bcaaa4"
+                    android:gravity="left|center_vertical" android:paddingBottom="2dp"
+                    android:text="this is device detail"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/btn_device_expand_icon"
+                    android:layout_width="@dimen/dimen_btn_size_device_control"
+                    android:layout_height="@dimen/dimen_btn_size_device_control"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingRight="1dp"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="1dp" android:paddingBottom="1dp"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_expand_off" />
+                
+            </com.tyw.moniter.main.ui.View.ExpandLinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"    android:id="@+id/frame_device_control"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_fragment_tags_deviceid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" android:textColor="#bcaaa4"
+                android:gravity="left|center_vertical" android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="this is device id"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/text_fragment_tags_deviceslaveid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" android:textColor="#bcaaa4"
+                android:gravity="left|center_vertical" android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="this is device slaveid"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/text_fragment_tags_deviceip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" android:textColor="#bcaaa4"
+                android:gravity="left|center_vertical" android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="this is device ip"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/text_fragment_tags_deviceport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" android:textColor="#bcaaa4"
+                android:gravity="left|center_vertical" android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="this is device port"
+                android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/text_fragment_tags_deviceWrite_minInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null" android:textColor="#bcaaa4"
+                    android:gravity="left|center_vertical" android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="this is device write min interval"
+                    android:textSize="15sp" />
+            <CheckBox
+                android:id="@+id/checkbox_fragment_tags_deviceWrite_UsingCode15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/check_01"
+                android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                android:paddingBottom="2dp"
+                android:text="Using write code 15"
+                android:textColor="#bcaaa4"
+                android:textSize="13sp" />
+                <CheckBox
+                    android:id="@+id/checkbox_fragment_tags_deviceWrite_UsingCode16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/check_01"
+                    android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="Using write code 16"
+                    android:textColor="#bcaaa4"
+                    android:textSize="13sp" />
+                <CheckBox
+                    android:id="@+id/checkbox_fragment_tags_deviceWrite_MatchAddrType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/check_01"
+                    android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="Write Match Address Type"
+                    android:textColor="#bcaaa4"
+                    android:textSize="13sp" />
+                <CheckBox
+                    android:id="@+id/checkbox_fragment_tags_device_swappedFP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/check_01"
+                    android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="SwappedFP"
+                    android:textColor="#bcaaa4"
+                    android:textSize="13sp" />
+            <CheckBox
+                android:id="@+id/checkbox_fragment_tags_device_swappedDbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/check_01"
+                android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                android:paddingBottom="2dp"
+                android:text="SwappedDbl"
+                android:textColor="#bcaaa4"
+                android:textSize="13sp" />
+            <CheckBox
+                android:id="@+id/checkbox_fragment_tags_device_firstWordLowIn32BitData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/check_01"
+                android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                android:paddingBottom="2dp"
+                android:text="FirstWORDLowIn32BitData"
+                android:textColor="#bcaaa4"
+                android:textSize="13sp" />
+            <CheckBox
+                android:id="@+id/checkbox_fragment_tags_device_firstDwordLowIn64BitData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/check_01"
+                android:gravity="left|center_vertical"  android:paddingLeft="4dp"
+                android:paddingBottom="2dp"
+                android:text="FirstDWORDLowIn64BitData"
+                android:textColor="#bcaaa4"
+                android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                 >
+
+                <TextView
+                    android:id="@+id/text_fragment_tags_device_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right|center_vertical"
+                    android:text="运行中..."
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/text_fragment_tags_device_keystring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/text_fragment_tags_device_state"
+                    android:gravity="left|center_vertical"
+                    android:text="this is tag this is tag:"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+            <!--tag列表-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_scrollFlags="scroll"
+                tools:listitem="@layout/listitem_tags" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

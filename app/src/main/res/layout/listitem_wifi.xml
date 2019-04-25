@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"
+        android:background="#fff0f0f0"  />
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_marginTop="6dp" android:layout_marginBottom="6dp"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/img_wifi_listitem_sign"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_wifi_scan_sign" />
+
+        <ImageButton
+            android:id="@+id/btn_wifi_listitem_info"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_infomation" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/btn_wifi_listitem_info"
+            android:layout_toRightOf="@id/img_wifi_listitem_sign"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_wifi_listitem_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:text="test wifi ssid"
+                android:textColor="#ff808080"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_wifi_listitem_connect_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:text="连接中..."
+                android:textColor="#ffb0b0b0"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.tyw.moniter.main.ui.View.ExpandLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp" android:id="@+id/expand_wifi_detail"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#fff0f0f0" />
+
+        <TextView
+            android:id="@+id/text_wifi_listitem_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:gravity="left|center_vertical"
+            android:text="test wifi detail"
+            android:textColor="#ff808080" />
+    </com.tyw.moniter.main.ui.View.ExpandLinearLayout>
+</LinearLayout>

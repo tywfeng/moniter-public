@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.tyw.moniter.main.ui.WifiItemFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".ui.WifiFragment">
+    <!--标题栏-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_custom_height"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_options_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/top_navigation_title_options"
+                        android:textColor="@color/color_top_navigation_title"
+                        android:textSize="22dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_options_navigation_contact_us"
+                        android:layout_width="@dimen/titlebar_custom_height"
+                        android:layout_height="@dimen/titlebar_custom_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_user_service" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/split_options_item"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="0dp" />
+            <!-- config path -->
+            <LinearLayout
+                android:id="@+id/btn_change_configpath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:clickable="true" android:focusable="true"
+                android:background="@drawable/btn_options_item"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/icon_option_item"
+                        android:src="@drawable/icon_options_filepath" />
+
+                    <TextView
+                        style="@style/text_title_options_item"
+                        android:text="配置路径" />
+
+                    <TextView
+                        android:id="@+id/text_configpath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right|center_vertical"
+                        android:layout_marginBottom="3dp"
+                        android:text="fsdajlkfasjflkasjlfsdajlkfasjflkasjlfsdajlkfasjflkasjlfsdajlkfasjflkasjlfsdajlkfasjflkasjl"
+                        android:textColor="#546e7a"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--小数点精度-->
+            <LinearLayout
+                android:id="@+id/btn_change_MaximumFractionDigits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_options_item" android:clickable="true" android:focusable="true"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/split_options_item"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/icon_option_item"
+                        android:src="@drawable/icon_infomation" />
+
+                    <TextView
+                        style="@style/text_title_options_item"
+                        android:text="保留小数位" />
+
+                    <TextView
+                        android:id="@+id/text_options_MaximumFractionDigits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:gravity="right|center_vertical"
+                        android:text="2位"
+                        android:textColor="#546e7a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/split_options_item"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp" />
+            </LinearLayout>
+
+            <!--预设颜色-->
+            <LinearLayout
+                android:id="@+id/btn_change_colors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View style="@style/split_options_item" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/icon_option_item"
+                        android:src="@drawable/icon_options_colors" />
+
+                    <TextView
+                        style="@style/text_title_options_item"
+                        android:text="预设颜色" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_colorpicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/listitem_wifi" />
+                <!---->
+                <View style="@style/split_options_item" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

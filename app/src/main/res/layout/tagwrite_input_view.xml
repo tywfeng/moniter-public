@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_tagwrite_inputview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="15dp"
+        android:text="title"
+        android:textColor="#4db6ac"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:background="#4db6ac" />
+
+    <TextView
+        android:id="@+id/text_tagwrite_inputview_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:text="msg"
+        android:textColor="#ff000000"
+        android:textSize="13sp" />
+    <!--输入值类型-->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_tagwrite_valuetype_OnlySrcValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OnlySrcValue"
+            android:textColor="#ff000000"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radio_tagwrite_valuetype_OnlyScaledValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OnlyScaledValue"
+            android:textColor="#ff000000"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radio_tagwrite_valuetype_AutoScaledOrSrcValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="AutoScaledOrSrcValue"
+            android:textColor="#ff000000"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radio_tagwrite_valuetype_OnlySrcRawHex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OnlySrcRawHex"
+            android:textColor="#ff000000"
+            android:textSize="11sp" />
+
+
+    </RadioGroup>
+    <!--输入框-->
+    <EditText
+        android:id="@+id/edit_tagwrite_target_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="输入即将写入的值"
+        android:textSize="12sp" />
+</LinearLayout>

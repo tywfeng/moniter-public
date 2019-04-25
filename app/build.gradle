@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+//    // 签名项必须写在前面
+//    signingConfigs{
+//        debug{
+//            keyAlias 'Moniter'
+//            keyPassword '$%WJKL2df2$#@a'
+//            storeFile file('../../Publish/Keystore/DeviceMoniter.jks')
+//            storePassword '1232dfsajiofd3!3pwa'
+//        }
+//        release{
+//            keyAlias 'Moniter'
+//            keyPassword '$%WJKL2df2$#@a'
+//            storeFile file('../../Publish/Keystore/DeviceMoniter.jks')
+//            storePassword '1232dfsajiofd3!3pwa'
+//        }
+//    }
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tyw.moniter.main"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 8
+        versionName "1.2.1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug{
+//            minifyEnabled true
+//            // 混淆使用默认混淆配置+自定义配置
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义签名
+//            signingConfig signingConfigs.debug
+        }
+        release {
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            // 自定义签名
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0-alpha01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha01'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation project(path: ':moniterlibrary')
+    implementation project(path: ':MPChartLib')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+}
+
+def static releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}

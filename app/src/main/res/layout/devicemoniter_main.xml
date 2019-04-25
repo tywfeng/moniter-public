@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_launcher_background"
+            android:text="@string/tab_wifi" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_launcher_background"
+            android:text="@string/tab_moniter" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_workorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_launcher_background"
+            android:text="@string/tab_workorder" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_options" />
+    </com.google.android.material.tabs.TabLayout>
+</RelativeLayout>

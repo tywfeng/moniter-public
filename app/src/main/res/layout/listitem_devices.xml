@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_listitem_devices"
+    android:layout_width="wrap_content" android:descendantFocusability="blocksDescendants"
+    android:layout_height="@dimen/dimen_height_list_devices" android:orientation="horizontal"
+    android:minWidth="@dimen/dimen_minwidth_listitem_devices_item">
+    <ImageButton
+        android:layout_width="28dp" android:id="@+id/btn_device_location_map"
+        android:background="@null" android:src="@drawable/icon_device_localaddr"
+        android:layout_margin="4dp" android:scaleType="centerInside"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/listitem_devices_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:foregroundGravity="center"
+        android:gravity="center" />
+    <ImageButton
+        android:layout_gravity="center_vertical"
+        android:layout_width="28dp" android:id="@+id/btn_device_run_stop"
+        android:background="@null" android:src="@drawable/btn_channel_detail"
+        android:layout_margin="4dp" android:scaleType="centerInside"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

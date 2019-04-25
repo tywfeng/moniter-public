@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout_moniter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#eeeeee"
+    tools:context=".ui.MoniterFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--标题栏-->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/frame_tags_header"
+                android:layout_width="match_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:contentScrim="?attr/colorPrimary"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent" android:background="?attr/colorPrimary"
+                        android:layout_height="@dimen/titlebar_custom_height"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <ImageButton
+                            android:id="@+id/btn_toggle_channellist"
+                            style="@style/btn_navigation_style"
+                            android:paddingLeft="0dp"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/btn_toggle_channellist" />
+
+                        <TextView
+                            android:id="@+id/text_moniter_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/top_navigation_title_moniter"
+                            android:textColor="@color/color_top_navigation_title"
+                            android:textSize="22sp" />
+
+                    </androidx.appcompat.widget.Toolbar> <!--设备滑动选项卡-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_devices" android:background="?attr/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_height_list_devices"
+                        android:layout_marginTop="@dimen/titlebar_custom_height"
+                        android:minHeight="@dimen/dimen_height_list_devices"
+                        android:orientation="vertical"
+                        app:layoutManager="LinearLayoutManager"
+                        app:layout_collapseMode="pin"
+                        tools:listitem="@layout/listitem_devices" />
+
+                    <TextView
+                        android:id="@+id/text_moniter_devices_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/list_devices"
+                        android:layout_alignBottom="@id/list_devices"
+                        android:layout_marginTop="@dimen/titlebar_custom_height"
+                        android:gravity="center"
+                        android:text="@string/hint_moniter_devices_no_device"
+                        android:textColor="#ffa00000"
+                        android:textSize="@dimen/textsize_moniter_devices_hint"
+                        android:textStyle="bold"
+                        app:layout_collapseMode="pin"
+                        app:layout_scrollFlags="scroll" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!--占位Tag列表-->
+            <FrameLayout
+                android:id="@+id/fragment_stub_tags"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <!-- "-->
+               <androidx.viewpager.widget.ViewPager
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+
+               </androidx.viewpager.widget.ViewPager>
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+    <!--侧边栏-->
+    <ListView
+        android:id="@+id/list_channel_side"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffeeeeee"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:divider="#ff333333"
+        android:dividerHeight="1dp"
+        android:elevation="2dp"
+        android:outlineAmbientShadowColor="#ff1f00c0" />
+</androidx.drawerlayout.widget.DrawerLayout>

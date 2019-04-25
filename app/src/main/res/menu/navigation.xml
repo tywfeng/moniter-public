@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_wifi"
+        android:icon="@drawable/wifi"
+        android:title="@string/tab_wifi" />
+
+    <item
+        android:id="@+id/navigation_moniter"
+        android:icon="@drawable/icon_moniter"
+        android:title="@string/tab_moniter" />
+    <item
+        android:id="@+id/navigation_workorder"
+        android:icon="@drawable/icon_work_order"
+        android:title="@string/tab_workorder" />
+    <item
+        android:id="@+id/navigation_options"
+        android:icon="@drawable/icon_options"
+        android:title="@string/tab_options" />
+
+</menu>

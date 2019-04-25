@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.tyw.moniter.main.ui.WifiItemFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#eeeeee"
+    tools:context=".ui.WifiFragment">
+    <!--标题栏-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_custom_height"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <ImageView
+                    android:layout_width="@dimen/titlebar_custom_height"
+                    android:id="@+id/btn_device_location_map_navigation_back"
+                    android:layout_height="@dimen/titlebar_custom_height" android:padding="8dp"
+                    android:src="@drawable/icon_back" android:scaleType="centerInside"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:id="@+id/text_device_location_map_navigation_title"
+                    android:text="@string/top_navigation_title_device_location_map"
+                    android:textColor="@color/color_top_navigation_title"
+                    android:textSize="20sp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 公司信息 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <View style="@style/split_options_item"/>
+
+                <!-- 电话 -->
+                <ImageView
+                    android:layout_width="match_parent" android:scaleType="fitCenter"
+                    android:layout_height="match_parent" android:background="@null"
+                    android:src="@drawable/img_device_local_china_review"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

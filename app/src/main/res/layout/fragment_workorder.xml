@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.tyw.moniter.main.ui.WifiItemFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#eeeeee"
+    tools:context=".ui.WorkOrderFragment">
+    <!--标题栏-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_custom_height"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_options_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center" android:layout_centerVertical="true"
+                        android:text="@string/top_navigation_title_workorder"
+                        android:textColor="@color/color_top_navigation_title"
+                        android:textSize="22dp" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 派工单 -->
+            <LinearLayout
+            android:layout_width="match_parent" android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <View style="@style/split_options_item"/>
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView style="@style/text_content_contact_us_item"  android:text="派工单"
+                    android:gravity="center" android:textSize="24sp"   android:layout_height="60dp" android:textStyle="bold"  />
+            </LinearLayout>
+        </LinearLayout>
+            <!-- 接单人 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <View style="@style/split_options_item"/>
+                <LinearLayout
+                    android:layout_width="match_parent" android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        style="@style/icon_workorder_item" android:src="@drawable/icon_workorder_head_portrait" />
+                    <TextView
+                        style="@style/text_title_workorder_item"  android:text="接单人员"
+                        />
+                    <EditText style="@style/text_input_workorder_item"  android:hint="输入接单人员"  />
+                    <ImageView style="@style/img_workorder_quickselect_item"
+                        android:id="@+id/btn_workorder_quickselect_user"
+                        android:src="@drawable/icon_workorder_quick_select" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 工单类型 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent" android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        style="@style/icon_workorder_item" android:src="@drawable/icon_workorder_type" />
+                    <TextView
+                        style="@style/text_title_workorder_item"  android:text="工单类型"
+                        />
+                    <EditText style="@style/text_input_workorder_item"  android:hint="输入工单类型"  />
+                    <ImageView style="@style/img_workorder_quickselect_item"
+                        android:id="@+id/btn_workorder_quickselect_type"
+                        android:src="@drawable/icon_workorder_quick_select" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 开始时间 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent" android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        style="@style/icon_workorder_item" android:src="@drawable/icon_workorder_starttime" />
+                    <TextView
+                        style="@style/text_title_workorder_item"  android:text="开始时间"
+                        />
+                    <EditText style="@style/text_input_workorder_item"  android:hint="输入开始时间"  />
+                    <ImageView style="@style/img_workorder_quickselect_item"
+                        android:id="@+id/btn_workorder_quickselect_starttime"
+                        android:src="@drawable/icon_workorder_quickselect_starttime" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 结束时间 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent" android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        style="@style/icon_workorder_item" android:src="@drawable/icon_workorder_endtime" />
+                    <TextView
+                        style="@style/text_title_workorder_item"  android:text="结束时间"
+                        />
+                    <EditText style="@style/text_input_workorder_item"  android:hint="输入结束时间"  />
+                    <ImageView style="@style/img_workorder_quickselect_item"
+                        android:id="@+id/btn_workorder_quickselect_endtime"
+                        android:src="@drawable/icon_workorder_quickselect_endtime" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 工单内容 -->
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent" android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="top|left"
+                        style="@style/icon_workorder_item" android:src="@drawable/icon_workorder_content" />
+                    <TextView android:layout_gravity="top|left"
+                        style="@style/text_title_workorder_item"  android:text="工单内容"
+                        />
+                    <EditText  android:hint="输入工单内容"
+                        android:layout_width="match_parent"
+                        android:background="@android:drawable/edit_text" android:layout_marginRight="10dp"
+                        android:paddingLeft="5dp"
+                        android:gravity="top|left"
+                         android:layout_height="130dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--提交按钮-->
+            <Button
+                android:id="@+id/btn_workorder_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_normal01"
+                android:text="提 交 工 单"
+                android:textSize="22sp" android:layout_marginLeft="25dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:textColor="#d7ccc8"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

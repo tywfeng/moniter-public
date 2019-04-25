@@ -1,0 +1,27 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!--标题栏高度-->
+    <dimen name="titlebar_custom_height">40dp</dimen>
+    <!--device设备列表高度-->
+    <dimen name="dimen_height_list_devices">35dp</dimen>
+    <!--device设备单项宽度-->
+    <dimen name="dimen_minwidth_listitem_devices_item">85dp</dimen>
+    <!--Tags离顶部距离-->
+    <dimen name="dimen_marginTop_tagsFragment">75dp</dimen>
+
+    <!--tag项未展开高度-->
+    <dimen name="dimen_height_listitem_tags_noexpand">40dp</dimen>
+    <dimen name="dimen_size_listitem_tags_chart_tagdetail">25dp</dimen>
+    <dimen name="dimen_width_listitem_tags_chart">25dp</dimen>
+    <dimen name="dimen_minheight_listitem_tags_device_keystring">35dp</dimen>
+    <dimen name="dimen_btn_size_device_control">25dp</dimen>
+
+
+    <!--设备提示文字大小-->
+    <dimen name="textsize_moniter_devices_hint">15sp</dimen>
+
+</resources>

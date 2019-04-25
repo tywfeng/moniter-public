@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_top_navigation_background">#3d3d3d</color>
+    <color name="color_top_navigation_title">#e1e1e1</color>
+    <color name="color_listitem_device_bg_check">#fff0f0f0</color>
+    <color name="color_listitem_device_bg_uncheck">#fff0f0f0</color>
+    <color name="color_listitem_device_text_check">#ff3F51B5</color>
+    <color name="color_listitem_device_text_uncheck">#ff707070</color>
+    <color name="color_listitem_channel_bg_check">#ff3F51B5</color>
+    <color name="color_listitem_channel_bg_uncheck">#fff0f0f0</color>
+    <!--无告警信息背景色-->
+    <color name="color_alarm_none">#ffe0e0e0</color>
+    <color name="color_btn_normal01_pressed">#4db6ac</color>
+    <color name="color_btn_normal01_normal">#3f51b5</color>
+    <color name="color_btn_normal01_focus">#7385e6</color>
+
+    <color name="color_btn_options_item_pressed">#757575</color>
+    <color name="color_btn_options_item_normal">#efeded</color>
+    <color name="color_btn_options_item_focus">#78909c</color>
+
+    <color name="color_btn_tags_item_pressed">#ababab</color>
+    <color name="color_btn_tags_item_normal">@color/color_alarm_none</color>
+    <color name="color_btn_tags_item_focus">#78909c</color>
+</resources>
